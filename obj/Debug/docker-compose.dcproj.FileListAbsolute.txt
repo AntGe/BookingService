@@ -1,0 +1,1 @@
+C:\Work\.NET Core\BookingService\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache

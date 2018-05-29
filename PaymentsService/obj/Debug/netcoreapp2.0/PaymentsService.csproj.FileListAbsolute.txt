@@ -1,0 +1,11 @@
+C:\Work\.NET Core\BookingService\PaymentsService\bin\Debug\netcoreapp2.0\PaymentsService.deps.json
+C:\Work\.NET Core\BookingService\PaymentsService\bin\Debug\netcoreapp2.0\PaymentsService.runtimeconfig.json
+C:\Work\.NET Core\BookingService\PaymentsService\bin\Debug\netcoreapp2.0\PaymentsService.runtimeconfig.dev.json
+C:\Work\.NET Core\BookingService\PaymentsService\bin\Debug\netcoreapp2.0\PaymentsService.dll
+C:\Work\.NET Core\BookingService\PaymentsService\bin\Debug\netcoreapp2.0\PaymentsService.pdb
+C:\Work\.NET Core\BookingService\PaymentsService\obj\Debug\netcoreapp2.0\PaymentsService.csproj.CoreCompileInputs.cache
+C:\Work\.NET Core\BookingService\PaymentsService\obj\Debug\netcoreapp2.0\PaymentsService.AssemblyInfoInputs.cache
+C:\Work\.NET Core\BookingService\PaymentsService\obj\Debug\netcoreapp2.0\PaymentsService.AssemblyInfo.cs
+C:\Work\.NET Core\BookingService\PaymentsService\obj\Debug\netcoreapp2.0\PaymentsService.dll
+C:\Work\.NET Core\BookingService\PaymentsService\obj\Debug\netcoreapp2.0\PaymentsService.pdb
+C:\Work\.NET Core\BookingService\PaymentsService\obj\Debug\netcoreapp2.0\PaymentsService.csprojAssemblyReference.cache

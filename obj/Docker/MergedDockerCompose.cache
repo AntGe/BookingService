@@ -1,0 +1,46 @@
+services:
+  bookingservice:
+    build:
+      context: C:\Work\.NET Core\BookingService
+      dockerfile: BookingService/Dockerfile
+    depends_on:
+    - sql.data
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: bookingservice
+    ports:
+    - published: 5101
+      target: 80
+    - target: 80
+  bookingsservice:
+    build:
+      context: C:\Work\.NET Core\BookingService
+      dockerfile: ../BookingsService/Dockerfile
+    image: bookingsservice
+  kafka:
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: 192.168.1.238
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+    image: wurstmeister/kafka
+    ports:
+    - published: 9092
+      target: 9092
+  paymentsservice:
+    build:
+      context: C:\Work\.NET Core\BookingService
+      dockerfile: PaymentsService/Dockerfile
+    image: paymentsservice
+  sql.data:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Pass@word
+    image: microsoft/mssql-server-linux
+    ports:
+    - published: 5434
+      target: 1433
+  zookeeper:
+    image: wurstmeister/zookeeper
+    ports:
+    - published: 2181
+      target: 2181
+version: '3.4'

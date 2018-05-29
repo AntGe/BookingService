@@ -1,0 +1,41 @@
+version: '3.4'
+
+services:
+  bookingservice:
+    image: bookingservice
+    build:
+      context: .
+      dockerfile: BookingService/Dockerfile
+    ports:
+      - "5101:80"
+    depends_on:
+      - sql.data
+  sql.data:
+    image: microsoft/mssql-server-linux
+    environment:
+      SA_PASSWORD: "Pass@word"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "5434:1433"
+  zookeeper:
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181:2181"
+  kafka:
+    image: wurstmeister/kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: "192.168.1.238"
+      KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"  
+  paymentsservice:
+    image: paymentsservice
+    build:
+      context: .
+      dockerfile: PaymentsService/Dockerfile
+  bookingsservice:
+    image: bookingsservice
+    build:
+      context: .
+      dockerfile: BookingsService/Dockerfile
+
